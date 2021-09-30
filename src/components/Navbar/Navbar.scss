@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+    overflow-x: hidden;
+}
+
+.nav {
+    min-height: 12vh;
+    font-family: 'Quicksand', sans-serif;
+
+    padding-top: 1.2rem;
+
+    display: flex;
+    justify-content: space-around;
+
+    .logo {
+        display: block;
+
+        p {
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .grey {
+            color: rgb(197, 197, 197);
+        }
+    }
+
+    .nav-link-container {
+        list-style: none;        
+        display: flex;
+        justify-content: space-around;
+        width: 25%;
+        transition: all 0.3s ease;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    #click:checked ~ ul {
+        left: 0%;
+    }
+
+    #clicked:checked ~ body{
+        overflow-x: hidden;
+    }
+
+    .menu-bar {
+        padding-left: 10px;
+        padding-right: 10px;
+        cursor: pointer;
+    }
+
+    #click {
+        display: none;
+    }
+
+    @media screen and (max-width: 1085px) {
+        .nav-link-container {
+            display: flex;
+            justify-content: space-around;
+            width: 35%;
+        }
+
+    }
+
+    @media screen and (max-width: 743px) {
+        .nav-link-container {
+            display: flex;
+            justify-content: space-around;
+            width: 37%;
+        }
+    }
+
+    @media screen and (max-width: 533px) {
+        .nav-link-container {
+            position: absolute;
+            top: 12vh;
+            left: 100%;
+            display:flex;
+            flex-direction: column;
+            height: 92vh;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            background-clip: padding-box;
+            box-shadow: 10px 10px 10px rgba(10, 10, 10, 0.3);
+            z-index: 2;
+            width: 100%;
+        }
+
+        .burger {
+            display: block;            
+        }
+
+        ul li a:hover {
+            color:cyan;
+        }
+    }
+}
+
